@@ -1,0 +1,5 @@
+<%= stylesheet_link_tag 'digiselfie', :plugin => 'digiselfie_login' %>
+
+<% if Setting.plugin_digiselfie_login['oauth_authentification'] %>
+  <%= javascript_include_tag "https://www.digiselfie.com/static/diget.js", :data => {:state => "signIn", :digiselfie => Setting.plugin_digiselfie_login['digiselfie_api_key']} %>
+<% end %>

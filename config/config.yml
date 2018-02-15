@@ -1,0 +1,5 @@
+digiselfie:
+  site: https://www.digiselfie.com/api/v1.0/consent
+  authorize_url: https://www.digiselfie.com/oauth2/auth
+  token_url: https://www.digiselfie.com/oauth2/token
+  claim_url: https://www.digiselfie.com/api/v1.0/claim

@@ -1,0 +1,35 @@
+<h3>Settings</h3>
+<p>
+  <label>Enabled:</label>
+  <%= check_box_tag "settings[oauth_authentification]", true, @settings['oauth_authentification'] %>
+</p>
+<p>
+  <label>Client ID:</label>
+  <%= text_field_tag 'settings[client_id]', @settings['client_id'], :size => 30 %>
+</p>
+<p>
+  <label>Client Secret:</label>
+  <%= text_field_tag 'settings[client_secret]', @settings['client_secret'], :size => 30 %>
+</p>
+<p>
+  <label>Digiselfie API Key:</label>
+  <%= text_field_tag 'settings[digiselfie_api_key]', @settings['digiselfie_api_key'], :size => 30 %>
+</p>
+
+<div id="app-help" style="display:none">
+  <hr>
+  <p style="padding-left:20px">
+  Application id and secret (also sometimes referred as Consumer key and secret or Client id and secret) are what we call an application credentials. This application will link your website to Digital Selfie API and these credentials are needed in order for Digital Selfie users to access your website.
+  These credentials may also differ in format, name and content depending on the social network.
+  </p>
+  <p style="padding-left:20px">To enable authentication with this provider and to register a new Digital Selfie API Application, follow the steps	: </p>
+  <ol>
+    <li>First go to: <a href="https://developer.digiselfiexchange.com/apps">https://developer.digiselfiexchange.com/apps</a></li>
+    <li>Create a new application.</li>
+    <li>Fill out any required fields such as the application name and description.</li>
+    <li>Provide this URL as the Callback URL for your application:
+       <%=  request.base_url + "/digiselfie/oauth2callback" %>
+    </li>
+    <li>Once you have registered, past the created application credentials into the boxes above.</li>
+  </ol>
+</div>

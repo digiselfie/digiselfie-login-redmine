@@ -1,0 +1,3 @@
+ru:
+  notice_unable_to_obtain_digiselfie_credentials: "Не удалось получить данные от Digiselfie."
+  notice_digiselfie_access_denied: "Для корректного входа необходимо разрешить приложению доступ к аккаунту."
